@@ -1,0 +1,29 @@
+.section-wrapper {
+  margin: 0 40px;
+  margin-top: 50px;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 20px;
+
+  .textarea {
+    resize: auto;
+  }
+  button {
+    margin-top: 20px;
+    width: 120px;
+    height: 34px;
+    border-radius: 20px;
+    color: white;
+    background-color: #5a328a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s all linear;
+    &:hover {
+      background-color: #3a294f;
+    }
+  }
+}
