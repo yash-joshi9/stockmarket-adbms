@@ -1,0 +1,18 @@
+.header-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.header-text {
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 18px;
+    padding: 5px;
+
+    &.is-selected {
+        background-color: red;
+        color:  white;
+    }
+}
