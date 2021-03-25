@@ -14,7 +14,7 @@ export const register = (payload) => {
 export const registerUser = (values) => async (dispatch) => {
    
     let url = `${host}/users`
-    console.log(values, ">>>>>>>>>>>>>>")
+   
     let {name, email, password, phoneNumber } = values;
     password = btoa(password);
     const data = {name, email, password, phoneNumber}
