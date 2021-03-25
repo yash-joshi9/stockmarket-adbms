@@ -4,7 +4,8 @@ const app = express();
 
 require("./db/mongoose");
 const userRouter = require("./routers/user");
-const playerRouter = require("./routers/player");
+const stockRouter = require("./routers/stocks");
+
 
 
 const port = process.env.PORT || 3000;
@@ -13,7 +14,7 @@ app.use(express.json());
 
 
 app.use(userRouter);
-app.use(playerRouter)
+app.use(stockRouter);
 
 
 console.log(">>>>>>")

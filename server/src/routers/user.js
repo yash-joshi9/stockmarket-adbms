@@ -1,12 +1,9 @@
 const express = require("express");
 const User = require("../models/User");
-const Player = require("../models/Players");
 
 const auth = require("../middleware/auth");
-const players = require("../allplayers");
 
 var cors = require('cors');
-const Team = require("../models/Teams");
 
 var app = express();
 app.use(cors())
@@ -63,7 +60,7 @@ router.post("/users", cors(corsOptions), async (req, res) => {
 
   let {name, email, phoneNumber, password } = req.body;
   
-  password = (Buffer.from(password, 'base64').toString());
+  // password = (Buffer.from(password, 'base64').toString());
   
   const data = {name, email, phoneNumber, password}
   const user = new User(data);

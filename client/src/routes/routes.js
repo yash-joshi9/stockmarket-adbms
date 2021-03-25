@@ -9,7 +9,8 @@ import dashboardContainer from "../container/dashboardContainer";
 import Cookies from "universal-cookie";
 import AboutUs from "../component/AboutUs/AboutUs" 
 import HelpPage from "../component/HelpPage/HelpPage";
-
+import stockContainer from "../container/stockContainer";
+import stockDataContainer from "../container/stockDataContainer";
 
 const cookies = new Cookies();
 
@@ -45,6 +46,8 @@ export const Routes = () => {
                         {/* <Route path="/login" exact={true} component={LoginContainer} /> */}
                         {/* <Route component={ErrorPage404} /> */}
                         <Route path="/AboutUs" exact={true} component={AboutUs} />
+                        <Route path="/allStocks" exact={true} component={stockContainer} />
+                        <Route path="/allStocks/:name" exact={true} component={stockDataContainer} />
 
                     </Fragment>
                 )
