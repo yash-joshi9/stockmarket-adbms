@@ -1,0 +1,24 @@
+.Stocks-container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.stock-table, th, td {
+    border: 1px solid black;
+}
+
+.table-row {
+    cursor: pointer;
+
+    &:hover {
+        background-color:rgba($color: red, $alpha: 0.1);
+    }
+}
+
+
+.stock-data-graph-wapper {
+    display: flex;
+}
