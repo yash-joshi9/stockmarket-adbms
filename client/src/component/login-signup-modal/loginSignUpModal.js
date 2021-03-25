@@ -27,7 +27,7 @@ export default function LoginSignUpModal(props) {
             onClose={() => onHandleShowLoginSignUp(false)}
         >
             <div className="login-signup-container">
-                {/* <div className="header-bar">
+                <div className="header-bar">
                     <div
                         className={`header-text ${isLogin ? "is-selected" : ""}`}
                         onClick={() => setisLogin(true)}>
@@ -38,7 +38,7 @@ export default function LoginSignUpModal(props) {
                         onClick={() => setisLogin(false)}>
                         Sign-Up
                     </div>
-                </div> */}
+                </div>
 
                 {isLogin
                     ?

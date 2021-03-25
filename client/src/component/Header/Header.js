@@ -73,6 +73,10 @@ function HeaderComponent(props) {
     history.push("/help-page");
   };
 
+  const handleStock = async (e) => {
+    const { history } = props;
+    history.push("/allStocks");
+  };
 
   const getToken = cookies.get("authToken");
   return (
@@ -85,67 +89,7 @@ function HeaderComponent(props) {
           <div className="first-part-header">
             <ul className="list-part">
               <li onClick={handleHome}> Home </li>
-              {getToken && (
-                <Fragment>
-                  <li>
-                    <DropDown name="Teams">
-                      <ul>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Chennai Super Kings
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Delhi Capitals
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Kings XI Punjab
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Kolkata Knight Riders
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Mumbai Indians
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Rajasthan Royals
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Royal Challengers Bangalore
-                          </div>
-                        </li>
-                        <li>
-                          <div onClick={(e) => handleTeam(e)}>
-                            Sunrisers Hyderabad
-                          </div>
-                        </li>
-                      </ul>
-                    </DropDown>
-                  </li>
-                  <li
-                    onClick={() => {
-                      handleMatches();
-                    }}
-                  >
-                    {" "}
-                    Matches{" "}
-                  </li>
-                </Fragment>
-              )}
-              {getToken && (
-                <li onClick={() => handleCreateTeam()}> Create a team </li>
-              )}
+              <li onClick={handleStock}> All Stocks </li>
               <li onClick={() =>handleAboutUs()}> About Us </li>
               <li onClick={() =>handleHelp()}> Help </li>
             </ul>
