@@ -25,13 +25,9 @@ const CompareStocks = (props) => {
   const [stockRandInt, setStockRandInt] = useState([]);
   const [stockTransac, setstockTransac] = useState([]);
 
-  
-
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   };
-
-
 
   const handleClick = (e) => {
     const token = cookies.get("authToken");
@@ -95,7 +91,7 @@ const CompareStocks = (props) => {
       <div className="compare-stocks">
         {stock.length &&
           stock.map((item, key) => (
-              <div key={key} className="my-stock-wrapper-compare">
+            <div key={key} className="my-stock-wrapper-compare">
               <div className="my-stock-name">
                 <b> {item.name} </b>
               </div>

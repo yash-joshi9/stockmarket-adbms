@@ -35,7 +35,7 @@ const job = schedule.scheduleJob('0 * * * * *', function(date){
 
 
 
-// // add players to db
+// // add stocks to db
 //   ss.stock.forEach(async function(t) {
 //     console.log(t)
 //   const s = new Stocks(t)

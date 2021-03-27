@@ -16,17 +16,6 @@ var corsOptions = {
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-// try {
-
-//  const eachTeam = players.teams;
-
-//  eachTeam.forEach(async function(t) {
-//   const team = new Team(t)
-//   await team.save()
-// });
-// } catch {
-
-// }
 
 router.post("/players", cors(corsOptions), async (req, res) => {
   try {

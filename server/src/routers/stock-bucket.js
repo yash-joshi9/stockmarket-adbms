@@ -145,13 +145,6 @@ router.post("/stock-bucket-delete", cors(corsOptions), async (req, res) => {
     
     return res.status(200).send(updateStock);
 
-    // const data = {
-    //   userid: userId,
-    //   stockDetail: { stockId: `${singleStock[0]._id}`, quantity: inputData },
-    // };
-
-  
-  
   } catch (error) {
     console.log(error);
     res.status(400).send({ error: "failed to fetch the data " });
@@ -190,7 +183,6 @@ router.post("/my-stocks", cors(corsOptions), auth, async (req, res) => {
 
 router.post("/stock-bucket-get", cors(corsOptions), async (req, res) => {
   try {
-    console.log(req.body, ">>>>>>>>>>>>");
     return res.status(200).send(">>");
   } catch (error) {
     console.log(error);
