@@ -26,6 +26,11 @@ function HeaderComponent(props) {
     history.push("/login");
   };
 
+  const handleAddFunds = () => {
+    const { history } = props;
+    history.push("/add-funds");
+  };
+
   const handleLogout = () => {
     const { onLogout } = props;
     onLogout();
@@ -78,18 +83,31 @@ function HeaderComponent(props) {
     history.push("/allStocks");
   };
 
+  const  handleMyStock = async () => {
+    const { history } = props;
+    history.push("/myStocks");
+  }
+
+  const  handleCompareStocks = async () => {
+    const { history } = props;
+    history.push("/compare-stocks");
+  }
+
   const getToken = cookies.get("authToken");
   return (
     <div className={`header-main ${scroll ? "is-scrolled" : ""}`}>
       <div className="title-part">Stock Market</div>
       <div className="title-tag">TEST YOUR SKILLS</div>
       <div className="header-container">
-        <div className="logo-part">FLA</div>
+        <div className="logo-part">SM</div>
         <div className="header-list-part">
           <div className="first-part-header">
             <ul className="list-part">
               <li onClick={handleHome}> Home </li>
               <li onClick={handleStock}> All Stocks </li>
+              <li onClick={handleMyStock}> My Stocks </li>
+              <li onClick={handleAddFunds}> Add Funds </li>
+              <li onClick={handleCompareStocks}> Compare Stocks </li>
               <li onClick={() =>handleAboutUs()}> About Us </li>
               <li onClick={() =>handleHelp()}> Help </li>
             </ul>
