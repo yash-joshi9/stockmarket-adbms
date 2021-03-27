@@ -11,6 +11,10 @@ import AboutUs from "../component/AboutUs/AboutUs"
 import HelpPage from "../component/HelpPage/HelpPage";
 import stockContainer from "../container/stockContainer";
 import stockDataContainer from "../container/stockDataContainer";
+import MyStocksContainer from "../container/mystocksContainer";
+import AddFunds from "../component/stocks/addFunds";
+import CompareStocks from "../component/stocks/compareStocks";
+
 
 const cookies = new Cookies();
 
@@ -48,7 +52,9 @@ export const Routes = () => {
                         <Route path="/AboutUs" exact={true} component={AboutUs} />
                         <Route path="/allStocks" exact={true} component={stockContainer} />
                         <Route path="/allStocks/:name" exact={true} component={stockDataContainer} />
-
+                        <Route path="/myStocks" exact={true} component={MyStocksContainer} />
+                        <Route path="/add-funds" exact={true} component={AddFunds} />
+                        <Route path="/compare-stocks" exact={true} component={CompareStocks} />
                     </Fragment>
                 )
             }
