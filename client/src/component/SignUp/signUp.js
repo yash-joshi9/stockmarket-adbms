@@ -91,11 +91,10 @@ function SignUp(props) {
         <div class="signup__container">
         <div class="container__child signup__thumbnail">
             <div class="thumbnail__logo">
-            <h1 class="logo__text">FLA</h1>
+            <h1 class="logo__text">SM</h1>
             </div>
             <div class="thumbnail__content text-center">
             <h1 class="heading--primary">Welcome to Stock Market Predictor.</h1>
-            <div class="heading--secondary">Are you ready to join the league?</div>
             </div>
             <div class="thumbnail__links">
             <ul class="list-inline m-b-0 text-center">
