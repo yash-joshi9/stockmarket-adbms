@@ -62,7 +62,7 @@ router.post("/users", cors(corsOptions), async (req, res) => {
   
   // password = (Buffer.from(password, 'base64').toString());
   
-  const data = {name, email, phoneNumber, password}
+  const data = {name, email, phoneNumber, password, funds: 0}
   const user = new User(data);
 
   try {
@@ -119,7 +119,29 @@ router.get("/users/me", auth, async (req, res) => {
   res.status(200).send(req.user);
 });
 
+
+router.post("/users/funds", auth, async (req, res) => {
+
+  const { id, funds } = req.body;
+
+  const user = await User.findById(id);
+
+  const userUpdate = await User.updateOne(
+    { _id: id },
+    {
+      $set: {
+        "funds": user.funds + parseInt(funds),
+      },
+    }
+  );
+
+  console.log(user.funds,">>>>>>>>>>>>>")
+  
+  res.status(200).send(userUpdate);
+});
+
 router.post("/users/logout", auth, async (req, res) => {
+  console.log(req,">>>>>>>")
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.token;
