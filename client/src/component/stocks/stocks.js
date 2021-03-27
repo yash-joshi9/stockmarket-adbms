@@ -7,9 +7,6 @@ const host = process.env.REACT_APP_REACT_HOST;
 const Stock = (props) => {
   const [stock, setStock] = useState([]);
 
-  useEffect(() => {
-    console.log(props,">>>>>props")
-  }, [])
   
   useEffect(async () => {
     let url = `${host}/stocks`;

@@ -1,24 +1,200 @@
 .Stocks-container {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.stock-table, th, td {
-    border: 1px solid black;
+.stock-table,
+th,
+td {
+  border: 1px solid black;
+}
+td {
+  text-align: center;
 }
 
 .table-row {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        background-color:rgba($color: red, $alpha: 0.1);
-    }
+  &:hover {
+    background-color: rgba($color: red, $alpha: 0.1);
+  }
 }
 
+.button-wrapper {
+  margin-left: 30px;
+  button {
+    width: 150px;
+    height: 64px;
+    cursor: pointer;
+  }
+}
+
+.funds-hve {
+  margin-top: 20px;
+}
+
+.input-buy-stock {
+  margin-left: 30px;
+  display: flex;
+  margin-top: 40px;
+  input {
+    width: 150px;
+    height: 36px;
+  }
+}
+
+.input-div {
+  margin-left: 10px;
+}
 
 .stock-data-graph-wapper {
-    display: flex;
+  display: flex;
+  // flex-direction: column;
+  margin-top: 20px;
 }
+
+.stock-wapper-graphs-my {
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.stock-wapper-graphs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.my-stock-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.sell-stock {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.button {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Stocks-data-container {
+  margin-bottom: 100px;
+}
+
+.item-wapper-class {
+  margin-left: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 400px;
+}
+
+.Stocks-container-funds {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-funds {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.stock-title {
+  font-size: 24px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.error-tag {
+  margin-left: 30px;
+  margin-top: 20px;
+
+  color: red;
+}
+
+.total-funds {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.stocks-header-own {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.Stocks-compare {
+  margin: 50px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 10px;
+  input {
+    margin-left: 10px;
+  }
+}
+
+.button-compare {
+  margin: 50px;
+  button {
+    width: 150px;
+    height: 36px;
+  }
+}
+
+.compare-stocks {
+  display: flex;
+  justify-content: center;
+}
+
+.my-stock-name {
+  border: 1px solid black;
+
+}
+.my-stock-compare, .my-stock-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    border: 1px solid black;
+  }
+}
+
+.my-stock-wrapper-compare {
+  border: 1px solid black;
+ 
+  padding: 10px;
+} 
