@@ -1237,7 +1237,7 @@ export const tradedData = {
 
 
 
-export const tradedData = {
+export const tradedDataTransaction = {
 
   "1": [{
     numTradingTransaction: 876124934.5,
