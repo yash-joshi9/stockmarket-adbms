@@ -8,7 +8,7 @@ function Dashboard(props) {
 
     const handleHere = () => {
         const { history } =  props; 
-        history.push("/create-a-team");
+        history.push("/allStocks");
     }
 
     const { name, email, phoneNumber } = props;
@@ -19,7 +19,7 @@ function Dashboard(props) {
                 <div className="greet-msg">
                     Hello, {name}
                     <div className="greet-text">
-                        Create your fantasy team <span onClick={handleHere}> here </span>
+                        View all stocks <span onClick={handleHere}> here </span>
                     </div>
                 </div>
             </div>
