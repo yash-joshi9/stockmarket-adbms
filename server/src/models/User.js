@@ -10,6 +10,11 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  funds: {
+    type: Number,
+    required: false,
+    trim: true,
+  },
   email: {
     type: String,
     required: true,

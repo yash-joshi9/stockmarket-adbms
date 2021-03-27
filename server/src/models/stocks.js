@@ -66,11 +66,6 @@ const StocksSchema = new mongoose.Schema({
   }
 });
 
-StocksSchema.pre("save", async function (next) {
-    const stock = this;
-    console.log(stock,">>>>>>>>>>>>>>>>>>>>>>>>>>")
-    next();
-  });
 
 const Stocks = mongoose.model("Stocks", StocksSchema);
 
